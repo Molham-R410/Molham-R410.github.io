@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molham Romia - Professional Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* جميع أنماط CSS السابقة تبقى كما هي */
+        /* تم حذفها للتكرار، يرجى الاحتفاظ بها كما هي في الكود الأصلي */
+        :root {
+            --primary-color: #005FEE;
+            --secondary-color: #FFD700;
+            --dark-gray: #2A2A2A;
+            --light-gray: #F5F5F5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+        }
+
+        /* Navigation */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 150px 0 100px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #003366 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title i {
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+
+        .section-title::after {
+            content: "";
+            width: 50px;
+            height: 3px;
+            background: var(--secondary-color);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            padding: 20px 40px;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            left: -25px;
+            top: 20px;
+            background: var(--primary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Certificates Grid */
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .certificate-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Skills Matrix */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .skill-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: #eee;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: var(--primary-color);
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2>Molham Romia</h2>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#certificates">Certifications</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="section">
+            <h1>Electrical Engineer & Solar Energy Specialist</h1>
+            <p>Designing sustainable energy solutions for tomorrow</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="section-title"><i class="fas fa-user"></i>About Me</h2>
+        <div class="about-content">
+            <p>Electrical engineering graduate with over two years of experience in solar energy and electrical facility
+                studies. Aiming to build a career with a leading company to utilize my skills in electrical engineering
+                and project management.</p>
+            <div class="personal-info">
+                <p><i class="fas fa-envelope"></i> Molham.to2000@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +963 936930378</p>
+                <p><i class="fas fa-map-marker-alt"></i> Al kiswah, Reef dimashq, Syria</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <h2 class="section-title"><i class="fas fa-briefcase"></i>Professional Experience</h2>
+        <div class="timeline">
+            <!-- Solar PV Design Engineer -->
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-solar-panel"></i>
+                </div>
+                <h3>Solar PV Design Engineer</h3>
+                <p class="company">Freelance | Jun 2022 - Present</p>
+                <ul>
+                    <li>Designed 50+ photovoltaic systems (On-Grid & Off-Grid)</li>
+                    <li>Selected optimal components (solar panels, inverters, batteries)</li>
+                    <li>Supervised installation processes and system commissioning</li>
+                </ul>
+            </div>
+
+            <!-- Electrical Studies Engineer -->
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Electrical Studies Engineer</h3>
+                <p class="company">Fine Line LLC | Nov 2023 - Feb 2025</p>
+                <ul>
+                    <li>Electrical panel design and high current systems</li>
+                    <li>Lighting systems design (indoor/outdoor/decorative)</li>
+                    <li>Electrical board components specification</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <h2 class="section-title"><i class="fas fa-graduation-cap"></i>Education</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <h3>B.Sc. in Electrical Power Engineering</h3>
+                <p class="company">Damascus University | 2018 - 2024</p>
+                <ul>
+                    <li>GPA: 80.51% (Very Good)</li>
+                    <li>Graduation Project: Hybrid Voltage Source Inverter (1st Place Award)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2 class="section-title"><i class="fas fa-code"></i>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <h3>Engineering Software <i class="fas fa-cogs"></i></h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%"></div>
+                </div>
+                <ul>
+                    <li>AutoCAD</li>
+                    <li>DIALux evo</li>
+                    <li>MATLAB</li>
+                    <li>PV System Design</li>
+                </ul>
+            </div>
+
+            <div class="skill-item">
+                <h3>Programming <i class="fas fa-laptop-code"></i></h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%"></div>
+                </div>
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>C++</li>
+                    <li>C#</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="section">
+        <h2 class="section-title"><i class="fas fa-certificate"></i>Certifications</h2>
+        <div class="certificates-grid">
+            <div class="certificate-card">
+                <h3>ISO 9001:2015 Internal Auditor</h3>
+                <p>Order of Syrian Engineers</p>
+                <p class="date">March 2025 | 15 Training Hours</p>
+            </div>
+
+            <div class="certificate-card">
+                <h3>Solar Energy Systems Design</h3>
+                <p>ADRA Training Center</p>
+                <p class="date">July 2024 | 120 Training Hours</p>
+            </div>
+
+            <div class="certificate-card">
+                <h3>Industrial Electricity Training</h3>
+                <p>ADRA Center</p>
+                <p class="date">April-May 2024 | 296 Training Hours</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Achievements Section -->
+    <section id="achievements" class="section">
+        <h2 class="section-title"><i class="fas fa-trophy"></i>Achievements</h2>
+        <div class="achievements-grid">
+            <div class="achievement-card">
+                <h3>1st Place Graduation Project</h3>
+                <p>Damascus University 2023</p>
+                <p>"Design and Implement Hybrid Voltage Source Inverter"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages" class="section">
+        <h2 class="section-title"><i class="fas fa-language"></i>Languages</h2>
+        <div class="languages-grid">
+            <div class="language-item">
+                <h3>Arabic <span>(Native)</span></h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 100%"></div>
+                </div>
+            </div>
+            <div class="language-item">
+                <h3>English <span>(Professional)</span></h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 80%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
